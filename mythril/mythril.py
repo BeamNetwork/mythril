@@ -317,7 +317,7 @@ class Mythril(object):
 
             try:
                 # import signatures from solidity source
-                self.sigs.import_from_solidity_source(file)
+                self.sigs.import_from_solidity_source(file, self.solc_args)
                 # Save updated function signatures
                 self.sigs.write()  # dump signatures to disk (previously opened file or default location)
 
